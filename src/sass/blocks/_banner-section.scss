@@ -1,0 +1,80 @@
+.banner-section {
+    height: 100vh;
+    background: linear-gradient(rgba(37, 43, 73, 0.5),rgba(37, 43, 73, 0.5)), url('../images/home-page-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+    .container {
+        padding: 230px 15px 120px 15px;
+
+        @include mediaTablet {
+            padding: 260px 15px 125px 15px;
+        }
+
+        @include mediaMobile {
+            padding: 105px 20px 50px 20px;
+        }
+    }
+
+    &__content--wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+    }
+
+    &__title {
+        font-family: $fontRaleway;
+        font-weight: 900;
+        @include fontSize(64);
+        @include remLh(75);
+        margin-bottom: 30px;
+        text-transform: uppercase;
+
+        @include mediaTablet {
+            @include fontSize(48);
+            @include remLh(56);
+            margin-bottom: 62px;
+        }
+
+        @include mediaMobile {
+            @include fontSize(36);
+            @include remLh(42);
+            margin-bottom: 32px;
+        }
+    }
+
+    &__descr {
+        font-family: $fontRaleway;
+        font-weight: 400;
+        @include fontSize(24);
+        @include remLh(28); 
+        margin-bottom: 80px;
+
+        @include mediaTablet {
+            @include fontSize(18);
+            @include remLh(21);
+            margin-bottom: 92px;
+        }
+
+        @include mediaMobile {
+            @include fontSize(14);
+            @include remLh(16);
+            margin-bottom: 50;
+        }
+    } 
+
+    &__find-out-btn {
+        margin: 0 auto;
+
+        @include mediaMobile {
+            width: 100%;
+            max-width: 280px;
+            height: 58px;
+        }
+    }
+}
